@@ -1,0 +1,21 @@
+Computing History
+
+The history of computing began with early mechanical calculating devices.
+
+Charles Babbage designed the Analytical Engine in the 19th century. Ada
+Lovelace wrote an algorithm for the Analytical Engine and is often
+considered the first computer programmer.
+
+Alan Turing made major contributions to theoretical computer science and
+artificial intelligence. During World War II, he worked on codebreaking
+at Bletchley Park.
+
+ENIAC was one of the earliest general-purpose electronic computers.
+The development of electronic computers accelerated during the 1940s.
+
+Artificial intelligence became a formal research field in 1956 at the
+Dartmouth workshop. John McCarthy, Marvin Minsky, Claude Shannon, and
+Nathaniel Rochester were among the participants.
+
+Modern computing has developed through personal computers, the internet,
+cloud computing, machine learning, and generative artificial intelligence.
