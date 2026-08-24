@@ -4,7 +4,7 @@ from typing import List, Dict, Any
 
 from dotenv import load_dotenv
 
-from azure.identity import DefaultAzureCredential
+from azure.identity import ClientSecretCredential
 from azure.ai.projects import AIProjectClient
 
 from rag.search import ComputingHistorySearch
@@ -49,7 +49,11 @@ class AgentClient:
         # Foundry Project Client
         # =========================================================
 
-        credential = DefaultAzureCredential()
+        credential = ClientSecretCredential(
+    tenant_id=os.getenv("AZURE_TENANT_ID"),
+    client_id=os.getenv("AZURE_CLIENT_ID"),
+    client_secret=os.getenv("AZURE_CLIENT_SECRET"),
+)
 
         project_client = AIProjectClient(
             endpoint=self.agent_endpoint,

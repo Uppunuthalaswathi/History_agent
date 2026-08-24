@@ -18,7 +18,7 @@ from typing import Any, Literal
 
 from azure.ai.projects import AIProjectClient
 from azure.identity import (
-    DefaultAzureCredential,
+    ClientSecretCredential,
     get_bearer_token_provider,
 )
 
@@ -175,7 +175,11 @@ class ComputingHistorySearch:
         # Azure authentication
         # ---------------------------------------------------------
 
-        credential = DefaultAzureCredential()
+        credential = ClientSecretCredential(
+    tenant_id=os.getenv("AZURE_TENANT_ID"),
+    client_id=os.getenv("AZURE_CLIENT_ID"),
+    client_secret=os.getenv("AZURE_CLIENT_SECRET"),
+)
 
         # ---------------------------------------------------------
         # Microsoft Foundry project
